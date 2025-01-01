@@ -1,72 +1,351 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Luca Mitchell</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
 
-    <!-- FONTS -->
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/d6857f088c.js" crossorigin="anonymous"></script>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Courgette&family=Poiret+One&display=swap" rel="stylesheet">
-
-    <!-- ICONS -->
-    <script src="https://kit.fontawesome.com/d6857f088c.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
 </head>
 <body>
 
-    <p id="scroll" class="large light title">Scroll down</p>
+    <canvas></canvas>
+    <script src="dots.js"></script>
 
-    <header>
-        <div id="bars-top"></div>
-        <div id="bars-bottom"></div>
-        <div id="title-perspective-box">
-            <div id="title-box">
+    <div id="menu" class="grid-centre">
+        <button id="close-menu" class="medium" onclick="closeMenu()"><svg class="icon"><use href="images/sprite.svg#close"></use></svg></button>
+        <div class="grid-even gap-5">
+            <h2 class="large regular contrast">Menu</h2>
+            <div class="grid-auto gap-5">
+                <ul class="no-dots">
+                    <li class="small regular contrast-alt mb-1">Navigation</li>
+                    <li><a href="#about" class="medium regular contrast">About <svg class="icon"><use href="images/sprite.svg#arrow"></use></svg></a></li>
+                    <li><a href="#tools" class="medium regular contrast">Tools <svg class="icon"><use href="images/sprite.svg#arrow"></use></svg></a></li>
+                    <li><a href="#projects" class="medium regular contrast">Projects <svg class="icon"><use href="images/sprite.svg#arrow"></use></svg></a></li>
+                    <li><a href="#contact" class="medium regular contrast">Contact <svg class="icon"><use href="images/sprite.svg#arrow"></use></svg></a></li>
+                </ul>
+                <ul class="no-dots">
+                    <li class="small regular contrast-alt mb-1">For stalkers</li>
+                    <li><a href="" class="medium regular contrast">GitHub <svg class="icon"><use href="images/sprite.svg#arrow"></use></svg></a></li>
+                    <li><a href="" class="medium regular contrast">Email <svg class="icon"><use href="images/sprite.svg#arrow"></use></svg></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <button id="open-menu" onclick="openMenu()">
+        <svg class="icon">
+            <use href="images/sprite.svg#menu"></use>
+        </svg>
+    </button>
+
+    <div id="hero" class="grid-centre">
+        <div class="skinny centre-text" id="header-text">
+            <div class="appear-from-bottom">
                 <div>
-                    <h1 class="medium dark normal">Hi, i'm <em class="medium-large accent-dark special">Luca</em></h1>
-                    <p class="small dark bold normal">I like coding</p>
+                    <h1 class="large regular contrast thin">Hi, I'm <span class="gradient-text thick-ish">Luca</span>, I'm a</h1>
+                </div>
+            </div>
+            <div class="appear-from-bottom">
+                <div>
+                    <h1 class="large regular contrast thick-ish">Full Stack Developer</h1>
                 </div>
             </div>
         </div>
-    </header>
+    </div>
 
-    <script src="dynamicTilt.js"></script>
-    <script src="dynamicBars.js"></script>
-
-    <div id="master">
-
-        <section id="projects">
+    <div class="skinny" id="about">
+        <div class="grid-even gap-2">
             <div>
-                <div id="projects-header">
-                    <h2 class="large light title">// Projects</h2>
-                </div>
-                <div id="projects-grid">
-                    <div class="project">
-                        <div class="project-image" style="background-image: url(images/portfolioWebsite.png);"></div>
-                        <div class="project-info">
-                            <div class="project-header">
-                                <a href="" class="project-title medium dark bold title">Portfolio Website <i class="small accent fa-solid fa-arrow-up-right-from-square"></i></a>
-                                <a href="https://github.com/lucajmitchell/lucajmitchell.github.io" class="github-button small dark normal">GitHub repo <i class="fa-brands fa-github"></i></a>
-                            </div>
-                            <div class="line"></div>
-                            <div class="project-info-grid">
-                                <p class="small dark normal">A website to showcase all my personal programming projects.</p>
-                                <ul class="small dark normal">
-                                    <li><i class="fa-brands fa-square-js"></i> JavaScript</li>
-                                    <li><i class="fa-brands fa-html5"></i> HTML</li>
-                                    <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
-                                </ul>
-                            </div>
-                        </div>
+                <h1 class="large regular contrast thin-ish mb-responsive">Luca Mitchell</h1>
+                <div class="appear-from-bottom mb-responsive">
+                    <div class="grid-min gap-05 align-centre">
+                        <i class="fa-solid fa-location-dot small contrast-alt"></i>
+                        <div class="small regular contrast-alt thin-ish">United Kingdom</div>
+                        <i class="fa-solid fa-envelope small contrast-alt"></i>
+                        <div class="small regular contrast-alt thin-ish">lucajmitchell@gmail.com</div>
+                        <i class="fa-brands fa-github small contrast-alt"></i>
+                        <div class="small regular contrast-alt thin-ish">lucajmitchell</div>
                     </div>
                 </div>
             </div>
-        </section>
-
+            <div class="appear-from-right">
+                <div>
+                    <p class="small regular contrast-alt thin-ish">As a self-taught developer, I've designed and deployed websites, explored data science through deep learning neural networks, and created full-stack web applications for managing projects and emails. I especially enjoy crafting intuitive user interfaces and bringing data to life through visualization.</p>
+                </div>
+            </div>
+        </div>
+        <div class="hr"></div>
+        <div class="appear-from-bottom">
+            <div>
+                <h2 class="small regular contrast-alt thin-ish mb-05">About me</h2>
+                <p class="medium regular contrast thick">Hello 👋, I'm a 17 year old <span class="gradient-text">Comp Sci student</span>. I've been coding since 2018 and I'm currently getting into full stack development 💻. UI/UX has been my latest interest. Check out my projects and let me know what you think 😄.</p>
+            </div>
+        </div>
     </div>
-    
+
+    <div class="spacer"></div>
+
+    <div class="skinny" id="tools">
+        <h2 class="small regular contrast-alt thin-ish mb-1">My toolkit</h2>
+        <div class="flex-container gap-2">
+            <div class="appear-from-top">
+                <div class="grid-auto gap-05">
+                    <div class="tool-icon" style="background-image: url(images/example.jpg);"></div>
+                    <div class="medium regular contrast thin-ish">Python</div>
+                </div>
+            </div>
+            <div class="appear-from-top">
+                <div class="grid-auto gap-05">
+                    <div class="tool-icon" style="background-image: url(images/example.jpg);"></div>
+                    <div class="medium regular contrast thin-ish">JavaScript</div>
+                </div>
+            </div>
+            <div class="appear-from-top">
+                <div class="grid-auto gap-05">
+                    <div class="tool-icon" style="background-image: url(images/example.jpg);"></div>
+                    <div class="medium regular contrast thin-ish">HTML</div>
+                </div>
+            </div>
+            <div class="appear-from-top">
+                <div class="grid-auto gap-05">
+                    <div class="tool-icon" style="background-image: url(images/example.jpg);"></div>
+                    <div class="medium regular contrast thin-ish">CSS</div>
+                </div>
+            </div>
+            <div class="appear-from-top">
+                <div class="grid-auto gap-05">
+                    <div class="tool-icon" style="background-image: url(images/example.jpg);"></div>
+                    <div class="medium regular contrast thin-ish">PostgreSQL</div>
+                </div>
+            </div>
+            <div class="appear-from-top">
+                <div class="grid-auto gap-05">
+                    <div class="tool-icon" style="background-image: url(images/example.jpg);"></div>
+                    <div class="medium regular contrast thin-ish">Flask</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="skinny" id="projects">
+        <h2 class="small regular contrast-alt thin-ish">Projects</h2>
+        <ul id="projects" class="no-dots">
+            <li class="appear-from-left">
+                <div>
+                    <a id="project-1" onmouseenter="attachImageToCursor('project-1', 'devsync.jpg')" href="project.html" class="large regular contrast thick grid-repel align-centre">DevSync <svg class="icon"><use href="images/sprite.svg#arrow"></use></svg></a>
+                    <div class="small regular contrast-alt">Full stack</div>
+                </div>
+            </li>
+            <li class="appear-from-left">
+                <div>
+                    <a href="" class="large regular contrast thick grid-repel align-centre">Mail Manager <svg class="icon"><use href="images/sprite.svg#arrow"></use></svg></a>
+                    <div class="small regular contrast-alt">Full stack</div>
+                </div>
+            </li>
+            <li class="appear-from-left">
+                <div>
+                    <a href="" class="large regular contrast thick grid-repel align-centre">NN Tester <svg class="icon"><use href="images/sprite.svg#arrow"></use></svg></a>
+                    <div class="small regular contrast-alt">Data science</div>
+                </div>
+            </li>
+            <li class="appear-from-left">
+                <div>
+                    <a href="" class="large regular contrast thick grid-repel align-centre">TNT Website & CMS <svg class="icon"><use href="images/sprite.svg#arrow"></use></svg></a>
+                    <div class="small regular contrast-alt">Frontend</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="skinny" id="contact">
+        <h2 class="small regular contrast-alt thin-ish mb-1">Get in touch</h2>
+        <form action="https://formspree.io/f/xkggpnjz" method="POST">
+            <div class="grid-even gap-1 mb-1">
+                <div class="appear-from-right">
+                    <div>
+                        <label for="fname">First name</label>
+                        <input type="text" name="fname" id="fname" placeholder="First name" required>
+                    </div>
+                </div>
+                <div class="appear-from-right">
+                    <div>
+                        <label for="sname">Surname</label>
+                        <input type="text" name="sname" id="sname" placeholder="Surname" required>
+                    </div>
+                </div>
+            </div>
+            <div class="appear-from-left mb-1">
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                </div>
+            </div>
+            <div class="appear-from-right mb-1">
+                <div>
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" placeholder="Message" required></textarea>
+                </div>
+            </div>
+            <div class="appear-from-top">
+                <div>
+                    <input type="submit" value="Send" style="cursor: pointer;">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="spacer"></div>
+
+    <footer>
+        <div class="skinny grid-even gap-5">
+            <ul class="no-dots">
+                <li class="small regular contrast-alt mb-1">Navigation</li>
+                <li><a href="#about" class="medium regular contrast">About <svg class="icon"><use href="images/sprite.svg#arrow"></use></svg></a></li>
+                <li><a href="#tools" class="medium regular contrast">Tools <svg class="icon"><use href="images/sprite.svg#arrow"></use></svg></a></li>
+                <li><a href="#projects" class="medium regular contrast">Projects <svg class="icon"><use href="images/sprite.svg#arrow"></use></svg></a></li>
+                <li><a href="#contact" class="medium regular contrast">Contact <svg class="icon"><use href="images/sprite.svg#arrow"></use></svg></a></li>
+            </ul>
+            <ul class="no-dots">
+                <li class="small regular contrast-alt mb-1">For stalkers</li>
+                <li><a href="" class="medium regular contrast">GitHub <svg class="icon"><use href="images/sprite.svg#arrow"></use></svg></a></li>
+                <li><a href="" class="medium regular contrast">Email <svg class="icon"><use href="images/sprite.svg#arrow"></use></svg></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+
+        const menu = document.getElementById('menu')
+
+        function openMenu() {
+            menu.style.bottom = 0
+        }
+
+        function closeMenu() {
+            menu.style.bottom = `100vh`
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuLinks = document.querySelectorAll("#menu a")
+            menuLinks.forEach(link => {
+                link.addEventListener("click", closeMenu);
+            })
+        })
+
+    </script>
+
+    <script>
+
+        function attachImageToCursor(id, image) {
+            const link = document.getElementById(id)
+
+            const thumbnail = document.createElement('img')
+            thumbnail.src = `images/${image}`
+            thumbnail.className = 'thumbnail'
+            document.body.appendChild(thumbnail)
+
+            link.addEventListener('mouseenter', () => {
+                thumbnail.style.display = 'block'
+            })
+
+            link.addEventListener('mousemove', (e) => {
+                thumbnail.style.left = `${e.pageX}px`
+                thumbnail.style.top = `${e.pageY}px`
+            })
+
+            link.addEventListener('mouseleave', () => {
+                thumbnail.style.display = 'none';
+            })
+        }
+
+        const links = document.querySelectorAll('#projects li a')
+        links.forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                links.forEach(otherLink => {
+                    if (otherLink !== link) {
+                        otherLink.classList.add('dimmed')
+                    }
+                })
+            })
+            link.addEventListener('mouseleave', () => {
+                links.forEach(otherLink => {
+                    otherLink.classList.remove('dimmed')
+                })
+            })
+        })
+
+
+    </script>
+
+    <script>
+
+        const animateElements_fromBottom = document.querySelectorAll('.appear-from-bottom > div')
+        const animateElements_fromTop = document.querySelectorAll('.appear-from-top > div')
+        const animateElements_fromLeft = document.querySelectorAll('.appear-from-left > div')
+        const animateElements_fromRight = document.querySelectorAll('.appear-from-right > div')
+        const delay = 200
+
+        function isVisible(el) {
+            const rect = el.getBoundingClientRect();
+            return (rect.top < window.innerHeight && rect.bottom > 0)
+        }
+
+        async function checkAnimations() {
+            for (const el of animateElements_fromBottom) {
+                if (isVisible(el)) {
+                    el.classList.add('animate-from-bottom')
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                } else {
+                    el.classList.remove('animate-from-bottom')
+                }
+            }
+            for (const el of animateElements_fromTop) {
+                if (isVisible(el)) {
+                    el.classList.add('animate-from-top')
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                } else {
+                    el.classList.remove('animate-from-top')
+                }
+            }
+            for (const el of animateElements_fromLeft) {
+                if (isVisible(el)) {
+                    el.classList.add('animate-from-left')
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                } else {
+                    el.classList.remove('animate-from-left')
+                }
+            }
+            for (const el of animateElements_fromRight) {
+                if (isVisible(el)) {
+                    el.classList.add('animate-from-right')
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                } else {
+                    el.classList.remove('animate-from-right')
+                }
+            }
+        }
+
+        document.addEventListener('scroll', checkAnimations)
+        document.addEventListener('DOMContentLoaded', checkAnimations)
+
+    </script>
 
 </body>
 </html>
