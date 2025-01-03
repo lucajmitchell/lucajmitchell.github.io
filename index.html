@@ -4,6 +4,10 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Luca Mitchell - Full stack development, web design, UI/UX">
+    <meta name="keywords" content="Luca Mitchell, full stack developer, web design, UI/UX design, responsive websites, interactive design, coding portfolio, minimalist web design, software engineer">
+    <meta name="author" content="Luca Mitchell">
+    <meta name="robots" content="index, follow">
 
     <title>Luca Mitchell</title>
 
@@ -24,45 +28,21 @@
     <canvas></canvas>
     <script src="dots.js"></script>
 
-    <div id="menu" class="grid-centre">
-        <button id="close-menu" class="medium" onclick="closeMenu()"><svg class="icon"><use href="images/sprite.svg#close"></use></svg></button>
-        <div class="grid-even gap-5">
-            <h2 class="large regular contrast">Menu</h2>
-            <div class="grid-auto gap-5">
-                <ul class="no-dots">
-                    <li class="small regular contrast-alt mb-1">Navigation</li>
-                    <li><a href="#about" class="medium regular contrast">About <svg class="icon"><use href="images/sprite.svg#arrow"></use></svg></a></li>
-                    <li><a href="#tools" class="medium regular contrast">Tools <svg class="icon"><use href="images/sprite.svg#arrow"></use></svg></a></li>
-                    <li><a href="#projects" class="medium regular contrast">Projects <svg class="icon"><use href="images/sprite.svg#arrow"></use></svg></a></li>
-                    <li><a href="#contact" class="medium regular contrast">Contact <svg class="icon"><use href="images/sprite.svg#arrow"></use></svg></a></li>
-                </ul>
-                <ul class="no-dots">
-                    <li class="small regular contrast-alt mb-1">For stalkers</li>
-                    <li><a href="" class="medium regular contrast">GitHub <svg class="icon"><use href="images/sprite.svg#arrow"></use></svg></a></li>
-                    <li><a href="" class="medium regular contrast">Email <svg class="icon"><use href="images/sprite.svg#arrow"></use></svg></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <button id="open-menu" onclick="openMenu()">
-        <svg class="icon">
-            <use href="images/sprite.svg#menu"></use>
-        </svg>
-    </button>
-
     <div id="hero" class="grid-centre">
         <div class="skinny centre-text" id="header-text">
+
             <div class="appear-from-bottom">
                 <div>
-                    <h1 class="large regular contrast thin">Hi, I'm <span class="gradient-text thick-ish">Luca</span>, I'm a</h1>
+                    <div class="large regular contrast thin">Hi, I'm <span class="gradient-text thick-ish">Luca</span>, I'm a</div>
                 </div>
             </div>
+
             <div class="appear-from-bottom">
                 <div>
-                    <h1 class="large regular contrast thick-ish">Full Stack Developer</h1>
+                    <h2 class="large regular contrast thick">Full Stack Developer</h2>
                 </div>
             </div>
+
         </div>
     </div>
 
@@ -103,37 +83,49 @@
         <div class="flex-container gap-2">
             <div class="appear-from-top">
                 <div class="grid-auto gap-05">
-                    <div class="tool-icon" style="background-image: url(images/example.jpg);"></div>
+                    <div class="tool-icon">
+                        <img src="images/python.png" alt="Python logo">
+                    </div>
                     <div class="medium regular contrast thin-ish">Python</div>
                 </div>
             </div>
             <div class="appear-from-top">
                 <div class="grid-auto gap-05">
-                    <div class="tool-icon" style="background-image: url(images/example.jpg);"></div>
+                    <div class="tool-icon">
+                        <img src="images/js.png" alt="JavaScript logo">
+                    </div>
                     <div class="medium regular contrast thin-ish">JavaScript</div>
                 </div>
             </div>
             <div class="appear-from-top">
                 <div class="grid-auto gap-05">
-                    <div class="tool-icon" style="background-image: url(images/example.jpg);"></div>
+                    <div class="tool-icon">
+                        <img src="images/html.png" alt="HTML logo">
+                    </div>
                     <div class="medium regular contrast thin-ish">HTML</div>
                 </div>
             </div>
             <div class="appear-from-top">
                 <div class="grid-auto gap-05">
-                    <div class="tool-icon" style="background-image: url(images/example.jpg);"></div>
+                    <div class="tool-icon">
+                        <img src="images/css.png" alt="CSS logo">
+                    </div>
                     <div class="medium regular contrast thin-ish">CSS</div>
                 </div>
             </div>
             <div class="appear-from-top">
                 <div class="grid-auto gap-05">
-                    <div class="tool-icon" style="background-image: url(images/example.jpg);"></div>
+                    <div class="tool-icon">
+                        <img src="images/postgresql.png" alt="PostgreSQL logo">
+                    </div>
                     <div class="medium regular contrast thin-ish">PostgreSQL</div>
                 </div>
             </div>
             <div class="appear-from-top">
                 <div class="grid-auto gap-05">
-                    <div class="tool-icon" style="background-image: url(images/example.jpg);"></div>
+                    <div class="tool-icon">
+                        <img src="images/flask.png" alt="Flask logo">
+                    </div>
                     <div class="medium regular contrast thin-ish">Flask</div>
                 </div>
             </div>
@@ -229,27 +221,6 @@
             </ul>
         </div>
     </footer>
-
-    <script>
-
-        const menu = document.getElementById('menu')
-
-        function openMenu() {
-            menu.style.bottom = 0
-        }
-
-        function closeMenu() {
-            menu.style.bottom = `100vh`
-        }
-
-        document.addEventListener("DOMContentLoaded", () => {
-            const menuLinks = document.querySelectorAll("#menu a")
-            menuLinks.forEach(link => {
-                link.addEventListener("click", closeMenu);
-            })
-        })
-
-    </script>
 
     <script>
 

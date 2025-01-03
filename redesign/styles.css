@@ -1,0 +1,123 @@
+
+
+/* Gneral */
+
+:root {
+    --colour-1: 250, 250, 250;
+    --colour-2: 30, 30, 30;
+    --colour-3: 130, 130, 130;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+*::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+}
+
+
+/* Structure */
+
+.fullscreen      { width: 100vw; height: 100vh; }
+.wide            { width: 100vw; }
+.fixed           { position: fixed; }
+.flex            { display: flex; }
+.justify-even    { justify-content: space-evenly; }
+.align-centre    { align-items: center; }
+.centre-content  { display: grid; place-items: center; }
+.centre-self     { margin: auto; width: fit-content; }
+.repel-right     { margin-right: auto; }
+
+.medium-padding  { padding: 3rem; box-sizing: border-box; }
+
+.small-gap       { gap: 1rem; }
+
+
+/* Text */
+
+.font-1       { font-family: 'Cormorant Garamond'; font-style: italic; font-weight: 100; }
+.font-2       { font-family: 'Poppins'; font-weight: 300; }
+
+.bigg         { font-size: 10rem; line-height: 10rem; }
+.big          { font-size: 5rem; }
+.medium       { font-size: 2rem; }
+.small        { font-size: 0.8rem; }
+
+.text-centre  { text-align: center; }
+.text-left    { text-align: left; }
+.text-right   { text-align: right; }
+
+.tc-1         { color: rgb(var(--colour-1)); }
+.tc-2         { color: rgb(var(--colour-2)); }
+.tc-3         { color: rgb(var(--colour-3)); }
+
+
+/* Colours */
+
+.bgc-1  { background-color: rgb(var(--colour-1)); }
+.bgc-2  { background-color: rgb(var(--colour-2)); }
+
+
+/* Components */
+
+.no-markers { list-style: none; }
+.inline-list { display: inline-flex; }
+
+.btn {
+    position: relative;
+    border: 1px solid rgb(var(--colour-2));
+    border-radius: 1000px;
+    color: rgb(var(--colour-2));
+    text-decoration: none;
+    padding: 1em 2em;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.5s, transform 0.5s, box-shadow 0.5s;
+}
+.btn::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 150%;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    background-color: rgb(var(--colour-2));
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    transition: top 0.5s;
+}
+.btn:hover          {
+    color: rgb(var(--colour-1));
+    transform: scale(1.2);
+    box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.3);
+}
+.btn:hover::before {
+    top: -50%;
+}
+
+
+/* Specific */
+
+#model-container {
+    position: absolute;
+    top: 0;
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    background-color: rgba(var(--colour-1), 0.7);
+}
+
+header > * {
+    z-index: 10;
+}
