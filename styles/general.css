@@ -1,0 +1,45 @@
+:root {
+    --primary: 255, 255, 255;
+    --secondary: 0, 0, 0;
+    --size-1: 0.8rem;
+    --size-2: 2rem;
+    --size-3: 4rem;
+    --t: 0.5s
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Satoshi';
+    font-weight: 100;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+::selection {
+    background-color: rgb(255, 191, 41);
+    color: white;
+}
+
+.bg-p {
+    background-color: rgb(var(--primary));
+}
+
+.bg-s {
+    background-color: rgb(var(--secondary));
+}
+
+img {
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+}
+
+p {
+    text-align: justify;
+}

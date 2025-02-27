@@ -1,0 +1,42 @@
+.cols {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-2);
+}
+
+.inline-list {
+    display: inline-flex;
+    height: fit-content;
+    gap: var(--size-2);
+    align-items: center;
+}
+
+.push-right {
+    width: fit-content;
+    margin-left: auto;
+}
+
+.push-down {
+    margin-top: auto;
+}
+
+.p-1 {
+    padding: var(--size-1);
+    box-sizing: border-box;
+}
+
+.p-2 {
+    padding: var(--size-2);
+    box-sizing: border-box;
+}
+
+.p-3 {
+    padding: var(--size-3);
+    box-sizing: border-box;
+}
