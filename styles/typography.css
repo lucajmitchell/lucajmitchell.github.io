@@ -1,0 +1,81 @@
+
+/* Size */
+
+div,
+a,
+p,
+h1,
+h2,
+h3 {
+    font-size: var(--font--small);
+}
+
+.text--large {
+    font-size: var(--font--large);
+    line-height: calc(var(--font--large) * 1.3);
+}
+
+/* Style */
+
+* {
+    font-family: var(--font--regular), sans-serif;
+    color: var(--fg);
+    font-weight: normal;
+}
+
+.text--bold {
+    font-family: var(--font--bold);
+}
+
+
+.text--subtle {
+    opacity: 0.5;
+}
+
+.text--accent {
+    font-family: var(--font--accent);
+}
+
+/* Structure */
+
+p {
+    text-align: justify;
+}
+
+/* Interactive */
+
+.text--interactive {
+    text-decoration: none;
+    width: fit-content;
+}
+
+.text--interactive::before {
+    content: '→';
+    font-size: 0;
+    margin-right: 0;
+    transition: font-size var(--time) var(--bezier), margin-right var(--time) var(--bezier);
+}
+
+.text--interactive::after {
+    content: '→';
+    font-size: 1em;
+    margin-left: 0.5em;
+    transition: font-size var(--time) var(--bezier), margin-right var(--time) var(--bezier);
+}
+
+.text--interactive:hover::before {
+    font-size: 1em;
+    margin-right: 0.5em;
+}
+
+.text--interactive:hover::after {
+    font-size: 0;
+    margin-right: 0;
+}
+
+#menu-button {
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+}

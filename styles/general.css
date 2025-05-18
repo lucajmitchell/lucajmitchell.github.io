@@ -1,45 +1,57 @@
-:root {
-    --primary: 255, 255, 255;
-    --secondary: 0, 0, 0;
-    --size-1: 0.8rem;
-    --size-2: 2rem;
-    --size-3: 4rem;
-    --t: 0.5s
+@font-face {
+    font-family: 'Satoshi Regular';
+    src: url(../fonts/Satoshi/Satoshi-Regular.otf);
 }
 
-* {
-    padding: 0;
-    margin: 0;
-    font-family: 'Satoshi';
-    font-weight: 100;
+@font-face {
+    font-family: 'Satoshi Bold';
+    src: url(../fonts/Satoshi/Satoshi-Bold.otf);
+}
+
+@font-face {
+    font-family: 'Editorial New Light';
+    src: url(../fonts/EditorialNew/EditorialNew-Light.otf);
+}
+
+:root {
+
+    /* Colours */
+    --fg: #000;
+    --bg: #fff;
+    --box: #f0f0f0;
+
+    /* Layout */
+    --u: 20px;
+    --r: 5px;
+
+    /* Type */
+    --font--small: 12px;
+    --font--large: 40px;
+    --font--regular: 'Satoshi Regular', sans-serif;
+    --font--bold: 'Satoshi Bold', sans-serif;
+    --font--accent: 'Editorial New Light', sans-serif;
+
+    /* Animation */
+    --time: 0.4s;
+    --time--short: 0.2s;
+    --bezier: cubic-bezier(0.7, 0, 0.3, 1);
+
 }
 
 ::-webkit-scrollbar {
-    width: 0;
-    height: 0;
+    width: 0px;
+    height: 0px;
 }
 
 ::selection {
-    background-color: rgb(255, 191, 41);
-    color: white;
+    background: var(--fg);
+    color: var(--bg);
 }
 
-.bg-p {
-    background-color: rgb(var(--primary));
-}
-
-.bg-s {
-    background-color: rgb(var(--secondary));
-}
-
-img {
-    display: block;
+body {
+    background-color: var(--bg);
 }
 
 ul {
-    list-style-type: none;
-}
-
-p {
-    text-align: justify;
+    list-style: none;
 }

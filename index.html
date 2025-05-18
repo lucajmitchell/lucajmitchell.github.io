@@ -4,133 +4,215 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Luca Mitchell</title>
   <link rel="stylesheet" href="styles/general.css">
-  <link rel="stylesheet" href="styles/specific.css">
-  <link rel="stylesheet" href="styles/layout.css">
-  <link rel="stylesheet" href="styles/interactive.css">
-  <link rel="stylesheet" href="styles/text.css">
+  <link rel="stylesheet" href="styles/structure.css">
+  <link rel="stylesheet" href="styles/typography.css">
 </head>
 
 <body>
-  <header class="bg-s p-2 flex-col">
-    <nav class="cols">
-      <ul class="inline-list">
-        <li><img src="images/logo_light.png" alt="" class="logo-small"></li>
-        <li class="ts-1 tc-p">Luca Mitchell</li>
-      </ul>
-      <ul class="inline-list">
-        <li><a href="" class="ts-1 tc-p link">Projects &#8600;</a></li>
-        <li><a href="" class="ts-1 tc-p link">About &#8600;</a></li>
-        <li><a href="" class="ts-1 tc-p link">Email &#8599;</a></li>
-      </ul>
-    </nav>
-    <div>
-      <span class="ts-big tc-p display">L</span>
-      <span class="ts-big tc-p display">U</span>
-      <span class="ts-big tc-p display">C</span>
-      <span class="ts-big tc-p display">A</span>
-    </div>
-    <div class="push-right">
-      <span class="ts-big tc-p display">M</span>
-      <span class="ts-big tc-p display">I</span>
-      <span class="ts-big tc-p display">T</span>
-      <span class="ts-big tc-p display">C</span>
-      <span class="ts-big tc-p display">H</span>
-      <span class="ts-big tc-p display">E</span>
-      <span class="ts-big tc-p display">L</span>
-      <span class="ts-big tc-p display">L</span>
-    </div>
-    <div class="cols push-down">
-      <ul class="inline-list">
-        <li class="ts-1 tc-p">UI</li>
-        <li class="ts-1 tc-p">Web Design</li>
-        <li class="ts-1 tc-p">Full Stack</li>
-      </ul>
-      <span class="ts-1 tc-p">Gloucestershire, UK</span>
-    </div>
-  </header>
-  <section id="showreel">
-    <video src="videos/placeholder.mp4" autoplay loop></video>
-    <div class="ts-2 tc-p">Showreel</div>
-  </section>
-  <section id="about" class="cols">
-    <video src="videos/placeholder.mp4" autoplay loop></video>
-    <div class="bg-p p-3 flex-col">
-      <div class="cols sticky">
-        <h2 class="ts-2 tc-s">About Me</h2>
-        <p class="ts-1 tc-s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique error expedita qui
-          voluptatem modi voluptatum aliquam doloribus iusto explicabo iure dolorem nobis, eum delectus excepturi non
-          quo, id maxime neque minima, incidunt quae? Sequi laboriosam, illum repudiandae temporibus ad nam corporis
-          quae officia fugit dolore saepe rem tempore nihil perspiciatis!</p>
+
+  <script>
+
+    const projects = [
+      {
+        metadata: {
+          title: 'QuantumDash Dashboard',
+          category: 'SaaS Platform',
+          skills: 'React, TypeScript, Node.js, Chart.js',
+          description: 'QuantumDash is a performance monitoring dashboard created for internal use by enterprise teams. It features real-time KPI tracking, custom report generation, and team-based data visualization tools tailored to support operations, sales, and engineering departments at scale.',
+        },
+        links: {
+          caseStudy: 'https://www.example.com',
+          liveSite: 'https://www.example.com',
+        },
+        images: {
+          lowRes: 'media/image.jpg',
+          highRes: 'media/image.jpg',
+        }
+      },
+      {
+        metadata: {
+          title: 'NimbusPay Web Portal',
+          category: 'Fintech',
+          skills: 'Vue.js, Firebase, SCSS, Vite',
+          description: 'NimbusPay’s web portal was developed to provide a secure, responsive interface for users to manage digital wallets, send and receive payments, and review financial activity. The app integrates with real-time database services and includes two-factor authentication and detailed transaction filtering.',
+        },
+        links: {
+          caseStudy: 'https://www.example.com',
+          liveSite: 'https://www.example.com',
+        },
+        images: {
+          lowRes: 'media/image2.jpg',
+          highRes: 'media/image2.jpg',
+        }
+      },
+      {
+        metadata: {
+          title: 'GloboMart Storefront',
+          category: 'E-Commerce',
+          skills: 'Next.js, GraphQL, Tailwind CSS',
+          description: 'A modern e-commerce platform for GloboMart, supporting internationalization, dynamic product listings, and a responsive UI. The storefront leverages server-side rendering for performance and SEO, and integrates with external APIs for inventory, shipping, and payment systems.',
+        },
+        links: {
+          caseStudy: 'https://www.example.com',
+          liveSite: 'https://www.example.com',
+        },
+        images: {
+          lowRes: 'media/image3.jpg',
+          highRes: 'media/image3.jpg',
+        }
+      },
+      {
+        metadata: {
+          title: 'AetherLearn LMS',
+          category: 'EdTech',
+          skills: 'Angular, NestJS, PostgreSQL',
+          description: 'AetherLearn is a fully responsive learning management system designed for enterprise training programs. It includes features such as role-based access control, real-time course tracking, assessments, certification generation, and integration with third-party HR tools.',
+        },
+        links: {
+          caseStudy: 'https://www.example.com',
+          liveSite: 'https://www.example.com',
+        },
+        images: {
+          lowRes: 'media/image4.jpg',
+          highRes: 'media/image4.jpg',
+        }
+      },
+      {
+        metadata: {
+          title: 'FrostByte Agency Site',
+          category: 'Creative',
+          skills: 'HTML, CSS, Three.js, GSAP',
+          description: 'A dynamic and visually engaging portfolio site for FrostByte Studio, highlighting creative agency projects through 3D animations and scroll-based transitions. The site emphasizes visual storytelling and interactive design, aiming to attract high-profile design clients and collaborators.',
+        },
+        links: {
+          caseStudy: 'https://www.example.com',
+          liveSite: 'https://www.example.com',
+        },
+        images: {
+          lowRes: 'media/image5.jpg',
+          highRes: 'media/image5.jpg',
+        }
+      },
+    ];
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const previewsContainer = document.getElementById('previews');
+      for (const project of projects) {
+        previewsContainer.innerHTML += `
+          <div class="preview">
+            <div class="preview__image-wrapper">
+              <img src="${project.images.lowRes}" alt="">
+            </div>
+            <div class="preview-title">
+              <h2 class="text--bold">${project.metadata.title}</h2>
+              <div>${project.metadata.category}</div>
+            </div>
+          </div>
+        `;
+      }
+    });
+
+  </script>
+
+  <script>
+
+    function updateProjectDisplayed(i) {
+      console.log('updateProjectDisplayed', i);
+      const project = projects[i];
+      metadata.innerHTML = `
+        <li>${project.metadata.title}</li>
+        <li>${project.metadata.category}</li>
+        <li>${project.metadata.skills}</li>
+        <li><a href="${project.links.caseStudy}" class="text--interactive">Case study</a></li>
+        <li><a href="${project.links.liveSite}" class="text--interactive">Live site</a></li>
+      `;
+      description.innerHTML = project.metadata.description;
+      mainImage.src = project.images.highRes;
+    };
+
+    let previousIndex = -1;
+    function scrollPreviews(previews) {
+      const viewportHeight = window.innerHeight;
+      const viewportMid = viewportHeight / 2;
+
+      for (let i = 0; i < previews.length; i++) {
+        const preview = previews[i];
+
+        const top = preview.getBoundingClientRect().top;
+        const bottom = preview.getBoundingClientRect().bottom;
+        const elementHeight = bottom - top;
+        const xMax = preview.offsetWidth / 10;
+        const scaleMin = 0.8;
+
+        if (top < viewportMid && bottom > viewportMid) {
+          preview.classList.add('preview--active');
+          if (i !== previousIndex) {
+            previousIndex = i;
+            selectedIndex = i;
+            updateProjectDisplayed(selectedIndex);
+          }
+        } else {
+          preview.classList.remove('preview--active');
+        }
+
+        const centreToTop = top + (elementHeight / 2)
+        const percentageFromTop = centreToTop / viewportHeight;
+        const sin = Math.sin(Math.PI * percentageFromTop);
+        const x = sin * xMax;
+        const scale = scaleMin + ((1 - scaleMin) * sin);
+        preview.style.transform = `translateX(${x}px) scale(${scale})`;
+
+      }
+    }
+
+    let metadata, description, mainImage;
+    document.addEventListener('DOMContentLoaded', function () {
+
+      const previews = document.querySelectorAll('.preview');
+      metadata = document.getElementById('project-metadata');
+      description = document.getElementById('project-description');
+      mainImage = document.getElementById('project-image');
+
+      updateProjectDisplayed(0);
+
+      document.addEventListener('scroll', () => scrollPreviews(previews));
+    });
+
+  </script>
+
+  <div id="centre-marker">▶</div>
+
+  <div class="page-grid">
+    <div id="previews"></div>
+    <header class="grid--3">
+
+      <h1><span class="text--bold">Luca Mitchell</span> Design & Development</h1>
+      <a href="" class="text--interactive">Menu</a>
+      <a href="" class="text--interactive">Contact</a>
+
+      <div class="divider"></div>
+      <div class="divider"></div>
+      <div class="divider"></div>
+
+      <div class="text--large text--accent">
+        I'm Luca.<br>
+        Software developer.<br>
+        Digital designer.<br>
       </div>
-      <div class="cols push-down">
-        <ul>
-          <li><a href="" class="ts-1 tc-s link-underline">Email &#8599;</a></li>
-          <li><a href="" class="ts-1 tc-s link-underline">GitHub &#8599;</a></li>
-        </ul>
-        <ul>
-          <li class="ts-1 tc-s">Projects</li>
-          <li><a href="" class="ts-1 tc-s link">Agora &#8599;</a></li>
-          <li><a href="" class="ts-1 tc-s link">Prove It &#8599;</a></li>
-          <li><a href="" class="ts-1 tc-s link">TNT &#8599;</a></li>
-          <li><a href="" class="ts-1 tc-s link">ONS Dashboard &#8599;</a></li>
-          <li><a href="" class="ts-1 tc-s link">Digit Recognition &#8599;</a></li>
-          <li><a href="" class="ts-1 tc-s link">Better Wiki &#8599;</a></li>
-          <li><a href="" class="ts-1 tc-s link">Better PMT &#8599;</a></li>
-          <li><a href="" class="ts-1 tc-s link">Mail Manager &#8599;</a></li>
-        </ul>
+      <ul id="project-metadata"></ul>
+      <p id="project-description"></p>
+
+      <div class="spacer"></div>
+
+      <div id="window">
+        <img src="" alt="" id="project-image">
       </div>
-    </div>
-  </section>
-  <section id="projects" class="cols">
-    <div id="project-content" class="bg-p p-3 flex-col">
-      <clas class="cols">
-        <h3 class="ts-2 tc-s">Project title</h3>
-        <img src="images/logo_dark.png" alt="" class="faint logo-medium push-right">
-      </clas>
-      <div class="cols push-down">
-        <a href="" class="ts-1 tc-s link-underline">Read More &#8599;</a>
-        <p class="ts-1 tc-s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea velit animi libero, eligendi et
-          quibusdam eos incidunt aspernatur reprehenderit aperiam officiis perspiciatis voluptatem dicta ut modi illo
-          quas quidem doloremque quae placeat. Sint exercitationem ut consequatur minus, quia sed accusantium,
-          voluptatum laboriosam minima dignissimos pariatur, laudantium nobis! Placeat, voluptatibus a.</p>
-      </div>
-    </div>
-    <div>
-      <div class="project-image" style="background-image: url(images/placeholder.jpg)"></div>
-      <div class="project-image" style="background-image: url(images/placeholder2.jpg)"></div>
-      <div class="project-image" style="background-image: url(images/placeholder3.jpg)"></div>
-    </div>
-  </section>
-  <section id="gallery">
-    <img src="images/placeholder.jpg" alt="">
-    <img src="images/placeholder2.jpg" alt="">
-    <img src="images/placeholder3.jpg" alt="">
-    <img src="images/placeholder.jpg" alt="">
-    <img src="images/placeholder2.jpg" alt="">
-    <img src="images/placeholder3.jpg" alt="">
-    <img src="images/placeholder.jpg" alt="">
-    <img src="images/placeholder2.jpg" alt="">
-    <img src="images/placeholder3.jpg" alt="">
-    <img src="images/placeholder.jpg" alt="">
-    <img src="images/placeholder2.jpg" alt="">
-    <img src="images/placeholder3.jpg" alt="">
-  </section>
-  <footer class="bg-s p-3 cols">
-    <img src="images/logo_light.png" alt="">
-    <ul>
-      <li class="ts-1 tc-p">Projects</li>
-      <li><a href="" class="ts-1 tc-p link">Agora &#8599;</a></li>
-      <li><a href="" class="ts-1 tc-p link">Prove It &#8599;</a></li>
-      <li><a href="" class="ts-1 tc-p link">TNT &#8599;</a></li>
-      <li><a href="" class="ts-1 tc-p link">ONS Dashboard &#8599;</a></li>
-      <li><a href="" class="ts-1 tc-p link">Digit Recognition &#8599;</a></li>
-      <li><a href="" class="ts-1 tc-p link">Better Wiki &#8599;</a></li>
-      <li><a href="" class="ts-1 tc-p link">Better PMT &#8599;</a></li>
-      <li><a href="" class="ts-1 tc-p link">Mail Manager &#8599;</a></li>
-    </ul>
-  </footer>
+
+    </header>
+  </div>
+
 </body>
 
 </html>
