@@ -96,8 +96,8 @@ body {
 }
 
 .fancy-border {
-  --x: 0px;
-  --y: 0px;
+  --x: -1000px;
+  --y: -1000px;
   position: relative;
   background-image: radial-gradient(
     circle at var(--x) var(--y),
