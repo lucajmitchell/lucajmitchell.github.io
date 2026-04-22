@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luca Mitchell</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/d6857f088c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <canvas class="bg-canvas"></canvas>
+    <div class="master">
+      <div class="color-panel fancy-border">
+        <button
+          class="color-button"
+          id="accent-0"
+          onclick="setAccent('accent-0')"
+        ></button>
+        <button
+          class="color-button"
+          id="accent-1"
+          onclick="setAccent('accent-1')"
+        ></button>
+        <button
+          class="color-button selected"
+          id="accent-2"
+          onclick="setAccent('accent-2')"
+        ></button>
+        <button
+          class="color-button"
+          id="accent-3"
+          onclick="setAccent('accent-3')"
+        ></button>
+        <button
+          class="color-button"
+          id="accent-4"
+          onclick="setAccent('accent-4')"
+        ></button>
+      </div>
+      <header class="section header">
+        <div id="map" class="fancy-border"></div>
+        <script>
+          fetch("images/world.svg")
+            .then((res) => res.text())
+            .then((svg) => {
+              document.getElementById("map").innerHTML = svg;
+            });
+        </script>
+        <div class="header-info">
+          <h1 class="text-large">Luca Mitchell</h1>
+          <p class="text-muted">Computer Science Student</p>
+          <p class="text-muted">University of Exeter</p>
+        </div>
+        <ul class="header-links">
+          <li>
+            <a href="" class="header-link text-regular"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </li>
+          <li>
+            <a href="" class="header-link text-regular"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+          </li>
+          <li>
+            <a href="" class="header-link text-regular"
+              ><i class="fa-solid fa-envelope"></i
+            ></a>
+          </li>
+        </ul>
+        <p class="text-regular paragraph">
+          Hello, I'm a first year at the University of Exeter studying BSc
+          Computer Science. I'm currently exploring several areas of computing,
+          including data science, robotics, and full-stack developement.
+        </p>
+      </header>
+      <section class="section">
+        <h2 class="section-title">Technologies</h2>
+        <div class="tech-grid">
+          <div class="tech fancy-border" id="python">
+            <i class="tech-icon fa-brands fa-python"></i>
+            <span class="text-regular">Python</span>
+          </div>
+          <div class="tech fancy-border" id="java">
+            <i class="tech-icon fa-brands fa-java"></i>
+            <span class="text-regular">Java</span>
+          </div>
+          <div class="tech fancy-border" id="js">
+            <i class="tech-icon fa-brands fa-js"></i>
+            <span class="text-regular">Javascript</span>
+          </div>
+          <div class="tech fancy-border" id="html">
+            <i class="tech-icon fa-brands fa-html5"></i>
+            <span class="text-regular">HTML5</span>
+          </div>
+          <div class="tech fancy-border" id="css">
+            <i class="tech-icon fa-brands fa-css3-alt"></i>
+            <span class="text-regular">CSS3</span>
+          </div>
+          <div class="tech fancy-border" id="sql">
+            <i class="tech-icon fa-solid fa-database"></i>
+            <span class="text-regular">SQL</span>
+          </div>
+          <div class="tech fancy-border" id="git">
+            <i class="tech-icon fa-brands fa-git-alt"></i>
+            <span class="text-regular">Git</span>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+          <a href="" class="project fancy-border">
+            <div class="project-image-wrapper">
+              <img
+                src="images/trading_system_cover.jpg"
+                alt=""
+                class="project-image"
+              />
+            </div>
+            <div class="project-info">
+              <h3 class="project-title text-regular">
+                Signal-Based Optimal Execution Trading System
+              </h3>
+              <p class="project-description paragraph text-muted">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Expedita, perferendis!
+              </p>
+              <ul class="project-tech">
+                <li class="project-tech-item text-muted">JavaScript</li>
+                <li class="project-tech-item text-muted">HTML</li>
+                <li class="project-tech-item text-muted">CSS</li>
+              </ul>
+            </div>
+          </a>
+          <a href="" class="project fancy-border">
+            <div class="project-image-wrapper">
+              <img src="images/drone_cover.jpg" alt="" class="project-image" />
+            </div>
+            <div class="project-info">
+              <h3 class="project-title text-regular">
+                Autonomous Human-Tracking Drone
+              </h3>
+              <p class="project-description paragraph text-muted">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Expedita, perferendis!
+              </p>
+              <ul class="project-tech">
+                <li class="project-tech-item text-muted">JavaScript</li>
+                <li class="project-tech-item text-muted">HTML</li>
+                <li class="project-tech-item text-muted">CSS</li>
+              </ul>
+            </div>
+          </a>
+          <a href="" class="project fancy-border">
+            <div class="project-image-wrapper">
+              <img
+                src="images/house_app_cover.jpg"
+                alt=""
+                class="project-image"
+              />
+            </div>
+            <div class="project-info">
+              <h3 class="project-title text-regular">
+                Uni House Management App
+              </h3>
+              <p class="project-description paragraph text-muted">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Expedita, perferendis!
+              </p>
+              <ul class="project-tech">
+                <li class="project-tech-item text-muted">JavaScript</li>
+                <li class="project-tech-item text-muted">HTML</li>
+                <li class="project-tech-item text-muted">CSS</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+      </section>
+      <section class="section">
+        <h2 class="section-title">Education & Experience</h2>
+        <div class="experience fancy-border">
+          <div class="experience-info">
+            <img
+              src="images/exeter_uni_logo.jpg"
+              alt=""
+              class="experience-logo"
+            />
+            <div>
+              <h3 class="text-regular">BSc Computer Science</h3>
+              <span class="text-muted">University of Exeter</span>
+            </div>
+          </div>
+          <span class="text-muted">Sep 2025 - Present</span>
+          <ul class="experience-bullets text-regular paragraph">
+            <li>First year grade: 2:1</li>
+            <li>
+              Key modules: Programming (Python), OOP (Java), Fundamentals of ML,
+              Data Structures & Algorithms, Computational Mathematics.
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <script src="scripts/stars.js"></script>
+    <script src="scripts/borders.js"></script>
+    <script src="scripts/colors.js"></script>
+  </body>
+</html>
