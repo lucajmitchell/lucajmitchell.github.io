@@ -48,6 +48,7 @@ body {
 
 .master {
   width: 600px;
+  max-width: 90%;
   margin: auto;
 }
 
@@ -243,6 +244,10 @@ body {
   flex: 1;
 }
 
+.header-info * {
+  white-space: nowrap;
+}
+
 .header-links {
   list-style: none;
   display: flex;
@@ -298,7 +303,7 @@ body {
 
 .tech-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: var(--space-sm);
 }
 
@@ -329,7 +334,7 @@ body {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: var(--space-sm);
 }
 
@@ -400,6 +405,10 @@ body {
   flex-direction: row;
   gap: var(--space-sm);
   align-items: center;
+}
+
+.experience-info * {
+  white-space: nowrap;
 }
 
 .experience-logo {
