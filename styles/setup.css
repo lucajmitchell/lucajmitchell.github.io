@@ -1,0 +1,137 @@
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/InterVariable.ttf);
+}
+
+@font-face {
+  font-family: "Instrument Serif";
+  src: url(../fonts/InstrumentSerif-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Instrument Serif Italic";
+  src: url(../fonts/InstrumentSerif-Italic.ttf);
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url(../fonts/ClashDisplay-Variable.ttf);
+}
+
+html {
+  font-size: 8px;
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 6px;
+  }
+}
+
+:root {
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 8rem;
+
+  --text-sm: 1.5rem;
+  --text-md: 1.75rem;
+  --text-lg: 2rem;
+  --text-xl: 5rem;
+  --icon: 2.5rem;
+
+  --content-width: 160rem;
+  --content-spacing: 20rem;
+
+  --card-radius: var(--space-sm);
+  --button-radius: var(--space-sm);
+
+  /* --text: #1b1b3c;
+  --muted: #6e6e7a;
+  --bg: #ebebee;
+  --bg-subtle: #f6f6f6;
+  --bg-trans: #eeeeee66;
+  --blur: blur(4px);
+  --shadow: 0px 2rem 4rem #888888aa; */
+
+  --text: #e5e5f2;
+  --muted: #a0a0b0;
+  --bg: #0f0f15;
+  --bg-subtle: #1d1d27;
+  --bg-trans: #0f0f15aa;
+  --blur: blur(4px);
+  --shadow: 0px 2rem 4rem #00000088;
+
+  --t: 0.2s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter";
+  font-size: var(--text-md);
+  color: var(--text);
+  font-weight: 400;
+}
+
+body {
+  background-color: var(--bg);
+}
+
+section {
+  margin-bottom: var(--content-spacing);
+}
+
+.content {
+  width: var(--content-width);
+  max-width: 90%;
+  margin: auto;
+}
+
+.section-title {
+  margin-bottom: var(--space-lg);
+}
+
+img {
+  display: block;
+}
+
+.small {
+  font-size: var(--text-sm);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.title {
+  font-size: var(--text-lg);
+  font-weight: 500;
+}
+
+.display,
+.display-italic {
+  font-family: "Instrument Serif";
+  font-size: var(--text-xl);
+  font-weight: 100;
+  line-height: 1.1em;
+}
+
+.display-italic {
+  font-family: "Instrument Serif Italic";
+}
+
+.paragraph {
+  line-height: 1.5em;
+}
+
+.badge {
+  display: block;
+  width: fit-content;
+  padding: 0.5em 1em;
+  background-color: var(--bg-subtle);
+  border-radius: 10000px;
+}

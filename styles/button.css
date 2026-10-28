@@ -1,0 +1,78 @@
+.buttons-panel {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-sm);
+}
+
+.button {
+  display: block;
+  width: fit-content;
+  padding: 1em 2em;
+  text-decoration: none;
+  border-radius: var(--button-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button.filled {
+  background-color: var(--text);
+  color: var(--bg);
+}
+
+.button.subtle {
+  background-color: var(--bg-subtle);
+  transition: transform var(--t);
+}
+
+.button.subtle:hover {
+  transform: translateY(-0.5em);
+}
+
+.button.stretch {
+  flex-grow: 1;
+}
+
+.button.icon {
+  padding: 1em;
+  height: 100%;
+  aspect-ratio: 1;
+}
+
+.button.icon i {
+  font-size: var(--icon);
+}
+
+.button.internal::before {
+  content: '↘';
+  margin-right: 0.5em;
+  font-size: 0;
+  transition: font-size var(--t);
+}
+
+.button.internal::after {
+  content: '↘';
+  margin-left: 0.5em;
+  transition: font-size var(--t);
+}
+
+.button.external::before {
+  content: '↗';
+  margin-right: 0.5em;
+  font-size: 0;
+  transition: font-size var(--t);
+}
+
+.button.external::after {
+  content: '↗';
+  margin-left: 0.5em;
+  transition: font-size var(--t);
+}
+
+.button:hover::before {
+  font-size: 1em;
+}
+
+.button:hover::after {
+  font-size: 0;
+}

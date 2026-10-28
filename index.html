@@ -4,209 +4,335 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Luca Mitchell</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script
-      src="https://kit.fontawesome.com/d6857f088c.js"
-      crossorigin="anonymous"
-    ></script>
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.2.0/css/line.css"
+    />
+    <link rel="stylesheet" href="styles/setup.css" />
+    <link rel="stylesheet" href="styles/button.css" />
+    <link rel="stylesheet" href="styles/nav.css" />
+    <link rel="stylesheet" href="styles/hero.css" />
+    <link rel="stylesheet" href="styles/about.css" />
+    <link rel="stylesheet" href="styles/projects.css" />
+    <link rel="stylesheet" href="styles/contact.css" />
   </head>
   <body>
-    <canvas class="bg-canvas"></canvas>
-    <div class="master">
-      <div class="color-panel fancy-border">
-        <button
-          class="color-button"
-          id="accent-0"
-          onclick="setAccent('accent-0')"
-        ></button>
-        <button
-          class="color-button"
-          id="accent-1"
-          onclick="setAccent('accent-1')"
-        ></button>
-        <button
-          class="color-button selected"
-          id="accent-2"
-          onclick="setAccent('accent-2')"
-        ></button>
-        <button
-          class="color-button"
-          id="accent-3"
-          onclick="setAccent('accent-3')"
-        ></button>
-        <button
-          class="color-button"
-          id="accent-4"
-          onclick="setAccent('accent-4')"
-        ></button>
-      </div>
-      <header class="section header">
-        <div id="map" class="fancy-border"></div>
-        <script>
-          fetch("images/world.svg")
-            .then((res) => res.text())
-            .then((svg) => {
-              document.getElementById("map").innerHTML = svg;
-            });
-        </script>
-        <div class="header-info">
-          <h1 class="text-large">Luca Mitchell</h1>
-          <p class="text-muted">Computer Science Student</p>
-          <p class="text-muted">University of Exeter</p>
-        </div>
-        <ul class="header-links">
-          <li>
-            <a href="" class="header-link text-regular"
-              ><i class="fa-brands fa-github"></i
-            ></a>
-          </li>
-          <li>
-            <a href="" class="header-link text-regular"
-              ><i class="fa-brands fa-linkedin"></i
-            ></a>
-          </li>
-          <li>
-            <a href="" class="header-link text-regular"
-              ><i class="fa-solid fa-envelope"></i
-            ></a>
-          </li>
+    <nav class="nav">
+      <div class="content">
+        <span>Luca Mitchell</span>
+        <ul class="nav-links">
+          <li><a href="#about-section" class="link">About</a></li>
+          <li><a href="#projects-section" class="link">Projects</a></li>
+          <li><a href="#contact-section" class="link">Contact</a></li>
         </ul>
-        <p class="text-regular paragraph">
-          Hello, I'm a first year at the University of Exeter studying BSc
-          Computer Science. I'm currently exploring several areas of computing,
-          including data science, robotics, and full-stack developement.
-        </p>
-      </header>
-      <section class="section">
-        <h2 class="section-title">Technologies</h2>
-        <div class="tech-grid">
-          <div class="tech fancy-border" id="python">
-            <i class="tech-icon fa-brands fa-python"></i>
-            <span class="text-regular">Python</span>
-          </div>
-          <div class="tech fancy-border" id="java">
-            <i class="tech-icon fa-brands fa-java"></i>
-            <span class="text-regular">Java</span>
-          </div>
-          <div class="tech fancy-border" id="js">
-            <i class="tech-icon fa-brands fa-js"></i>
-            <span class="text-regular">Javascript</span>
-          </div>
-          <div class="tech fancy-border" id="html">
-            <i class="tech-icon fa-brands fa-html5"></i>
-            <span class="text-regular">HTML5</span>
-          </div>
-          <div class="tech fancy-border" id="css">
-            <i class="tech-icon fa-brands fa-css3-alt"></i>
-            <span class="text-regular">CSS3</span>
-          </div>
-          <div class="tech fancy-border" id="sql">
-            <i class="tech-icon fa-solid fa-database"></i>
-            <span class="text-regular">SQL</span>
-          </div>
-          <div class="tech fancy-border" id="git">
-            <i class="tech-icon fa-brands fa-git-alt"></i>
-            <span class="text-regular">Git</span>
+      </div>
+    </nav>
+    <section class="hero">
+      <div class="hero-bg" id="parallax"></div>
+      <div class="content">
+        <div class="hero-text">
+          <span class="badge hero-badge small"
+            >Seeking placement for 27/28 academic year</span
+          >
+          <h1 class="display hero-title">
+            Computer Science student interested in
+            <span class="display-italic">applied computing</span> in the
+            <span class="display-italic">defence industry</span>
+          </h1>
+          <p class="muted hero-subtitle">
+            Studying at University of Exeter. Based in Gloucestershire.
+          </p>
+          <div class="buttons-panel">
+            <a href="#projects-section" class="button filled internal"
+              >Projects</a
+            >
+            <a href="mailto:lucajmitchell@gmail.com" class="button icon subtle">
+              <i class="uil uil-envelope"></i>
+            </a>
+            <a
+              href="https://github.com/lucajmitchell"
+              class="button subtle icon"
+            >
+              <i class="uil uil-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/luca-mitchell-1a8a16278"
+              class="button icon subtle"
+            >
+              <i class="uil uil-linkedin"></i>
+            </a>
           </div>
         </div>
-      </section>
-      <section class="section">
-        <h2 class="section-title">Projects</h2>
-        <div class="projects-grid">
-          <a href="" class="project fancy-border">
-            <div class="project-image-wrapper">
-              <img
-                src="images/trading_system_cover.jpg"
-                alt=""
-                class="project-image"
-              />
+        <div class="hero-project">
+          <img
+            src="images/aircraft_identifier_cover_image.jpg"
+            alt=""
+            class="hero-project-image"
+          />
+          <div class="hero-project-info">
+            <h2 class="display hero-project-title title">
+              Project: Aircraft Identifier
+            </h2>
+            <p class="paragraph muted hero-project-description">
+              Machine learning program to identify military aircraft from
+              satellite imagery using PyTorch, including a suite of evaluation
+              tools.
+            </p>
+            <div class="buttons-panel">
+              <a href="#projects-section" class="button filled internal stretch"
+                >More projects</a
+              >
             </div>
-            <div class="project-info">
-              <h3 class="project-title text-regular">
-                Signal-Based Optimal Execution Trading System
-              </h3>
-              <p class="project-description paragraph text-muted">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Expedita, perferendis!
-              </p>
-              <ul class="project-tech">
-                <li class="project-tech-item text-muted">JavaScript</li>
-                <li class="project-tech-item text-muted">HTML</li>
-                <li class="project-tech-item text-muted">CSS</li>
-              </ul>
-            </div>
-          </a>
-          <a href="" class="project fancy-border">
-            <div class="project-image-wrapper">
-              <img src="images/drone_cover.jpg" alt="" class="project-image" />
-            </div>
-            <div class="project-info">
-              <h3 class="project-title text-regular">
-                Autonomous Human-Tracking Drone
-              </h3>
-              <p class="project-description paragraph text-muted">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Expedita, perferendis!
-              </p>
-              <ul class="project-tech">
-                <li class="project-tech-item text-muted">JavaScript</li>
-                <li class="project-tech-item text-muted">HTML</li>
-                <li class="project-tech-item text-muted">CSS</li>
-              </ul>
-            </div>
-          </a>
-          <a href="" class="project fancy-border">
-            <div class="project-image-wrapper">
-              <img
-                src="images/house_app_cover.jpg"
-                alt=""
-                class="project-image"
-              />
-            </div>
-            <div class="project-info">
-              <h3 class="project-title text-regular">
-                Uni House Management App
-              </h3>
-              <p class="project-description paragraph text-muted">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Expedita, perferendis!
-              </p>
-              <ul class="project-tech">
-                <li class="project-tech-item text-muted">JavaScript</li>
-                <li class="project-tech-item text-muted">HTML</li>
-                <li class="project-tech-item text-muted">CSS</li>
-              </ul>
-            </div>
-          </a>
+          </div>
         </div>
-      </section>
-      <section class="section">
-        <h2 class="section-title">Education & Experience</h2>
-        <div class="experience fancy-border">
-          <div class="experience-info">
+      </div>
+    </section>
+    <section class="about" id="about-section">
+      <div class="content">
+        <h2 class="section-title display">About</h2>
+        <div class="about-responsive-columns">
+          <div class="about-panel">
+            <ul class="about-info">
+              <li><i class="uil uil-user"></i><span>Luca Mitchell</span></li>
+              <li>
+                <i class="uil uil-graduation-cap"></i
+                ><span>BSc Computer Science with Industrial Placement</span>
+              </li>
+              <li>
+                <i class="uil uil-university"></i
+                ><span>University of Exeter</span>
+              </li>
+              <li>
+                <i class="uil uil-map-marker"></i
+                ><span>Gloucestershire, UK</span>
+              </li>
+            </ul>
+            <p class="paragraph muted">
+              Second-year Computer Science student looking for a placement year
+              in the UK South West defence sector. I have long held a special
+              interest in aerospace defence, especially fighter jets. I'm most
+              interested in machine learning and robotics. I look forward to
+              growing my existing data science and programming skills whilst
+              contributing to the development of innovative technologies that
+              have a direct real-world impact.
+            </p>
+          </div>
+          <div class="about-rows">
+            <div class="about-columns">
+              <div class="about-panel stat">
+                <span class="display">2:1</span>
+                <span class="muted">Achieved in 1st year (67%)</span>
+              </div>
+              <div class="about-panel stat">
+                <span class="display">5+</span>
+                <span class="muted">Relevant projects</span>
+              </div>
+            </div>
+            <div class="about-panel">
+              <ul class="about-skills">
+                <li>Java</li>
+                <li>JUnit</li>
+                <li>Python</li>
+                <li>Pandas</li>
+                <li>scikit-learn</li>
+                <li>PyTorch</li>
+                <li>matplotlib</li>
+                <li>seaborn</li>
+                <li>Flask</li>
+                <li>SQL</li>
+                <li>JavaScript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="projects" id="projects-section">
+      <div class="content">
+        <h2 class="section-title display">Projects</h2>
+        <div class="projects-container">
+          <div class="project">
             <img
-              src="images/exeter_uni_logo.jpg"
+              src="images/aircraft_identifier_cover_image.jpg"
               alt=""
-              class="experience-logo"
+              class="project-image"
             />
-            <div>
-              <h3 class="text-regular">BSc Computer Science</h3>
-              <span class="text-muted">University of Exeter</span>
+            <div class="project-info">
+              <h3 class="project-title title">Aircraft Identifier</h3>
+              <span class="project-category small muted">Machine learning</span>
+              <p class="paragraph project-description">
+                Machine learning program to identify military aircraft from
+                satellite imagery using PyTorch, including a suite of evaluation
+                tools.
+              </p>
+              <ul class="project-skills">
+                <li class="small muted">Python</li>
+                <li class="small muted">PyTorch</li>
+                <li class="small muted">matplotlib</li>
+                <li class="small muted">scikit-learn</li>
+                <li class="small muted">seaborn</li>
+              </ul>
+              <div class="buttons-panel">
+                <a
+                  href="https://github.com/lucajmitchell/aircraft-identifier"
+                  class="button filled external stretch"
+                  >View on GitHub</a
+                >
+              </div>
             </div>
           </div>
-          <span class="text-muted">Sep 2025 - Present</span>
-          <ul class="experience-bullets text-regular paragraph">
-            <li>First year grade: 2:1</li>
-            <li>
-              Key modules: Programming (Python), OOP (Java), Fundamentals of ML,
-              Data Structures & Algorithms, Computational Mathematics.
-            </li>
-          </ul>
+          <div class="project">
+            <img
+              src="images/budgeting_app_cover.jpg"
+              alt=""
+              class="project-image"
+            />
+            <div class="project-info">
+              <h3 class="project-title title">Budgeting App</h3>
+              <span class="project-category small muted"
+                >Full-stack development, data analysis</span
+              >
+              <p class="paragraph project-description">
+                Web app for analysing and budgeting monthly income and spending.
+                Emphasis on data collection, cleaning, and analysis. Uses a
+                Python (Flask) backend, SQL database, and HTML/CSS/JS frontend.
+              </p>
+              <ul class="project-skills">
+                <li class="small muted">Python</li>
+                <li class="small muted">SQL</li>
+                <li class="small muted">Pandas</li>
+                <li class="small muted">Flask</li>
+                <li class="small muted">HTML</li>
+                <li class="small muted">CSS</li>
+                <li class="small muted">JavaScript</li>
+                <li class="small muted">Chart.js</li>
+              </ul>
+              <div class="buttons-panel">
+                <a
+                  href="https://github.com/lucajmitchell/budgeting-software"
+                  class="button filled external stretch"
+                  >View on GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project">
+            <img
+              src="images/card_game_cover.jpg"
+              alt=""
+              class="project-image"
+            />
+            <div class="project-info">
+              <h3 class="project-title title">Card Game</h3>
+              <span class="project-category small muted">OOP, concurrency</span>
+              <p class="paragraph project-description">
+                Simple card game for uni, practising proper use of concurrency
+                in Java.
+              </p>
+              <ul class="project-skills">
+                <li class="small muted">Java</li>
+                <li class="small muted">Maven</li>
+                <li class="small muted">JUnit</li>
+              </ul>
+              <div class="buttons-panel">
+                <a
+                  href="https://github.com/lucajmitchell/card-game"
+                  class="button filled external stretch"
+                  >View on GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project">
+            <img
+              src="images/city_rescue_cover.jpg"
+              alt=""
+              class="project-image"
+            />
+            <div class="project-info">
+              <h3 class="project-title title">City Rescue</h3>
+              <span class="project-category small muted"
+                >OOP, algorithms & data structures</span
+              >
+              <p class="paragraph project-description">
+                Emergency services management simulator for uni, practising
+                fundamentals of Java.
+              </p>
+              <ul class="project-skills">
+                <li class="small muted">Java</li>
+                <li class="small muted">Maven</li>
+                <li class="small muted">JUnit</li>
+              </ul>
+              <div class="buttons-panel">
+                <a
+                  href="https://github.com/lucajmitchell/city-rescue"
+                  class="button filled external stretch"
+                  >View on GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project">
+            <img src="images/othello_cover.jpg" alt="" class="project-image" />
+            <div class="project-info">
+              <h3 class="project-title title">Othello Game</h3>
+              <span class="project-category small muted"
+                >Full-stack development, algorithms & data structures</span
+              >
+              <p class="paragraph project-description">
+                Othello game web app (with bot opponent) for uni, practising
+                fundamentals of full stack web development and data structures
+                and algorithms.
+              </p>
+              <ul class="project-skills">
+                <li class="small muted">Python</li>
+                <li class="small muted">Flask</li>
+                <li class="small muted">HTML</li>
+                <li class="small muted">CSS</li>
+                <li class="small muted">JavaScript</li>
+              </ul>
+              <div class="buttons-panel">
+                <a
+                  href="https://github.com/lucajmitchell/othello"
+                  class="button filled external stretch"
+                  >View on GitHub</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
-      </section>
-    </div>
-    <script src="scripts/stars.js"></script>
-    <script src="scripts/borders.js"></script>
-    <script src="scripts/colors.js"></script>
+      </div>
+    </section>
+    <section class="contact" id="contact-section">
+      <div class="contact-bg"></div>
+      <div class="content">
+        <h2 class="section-title display">Contact</h2>
+        <div class="contact-links">
+          <div class="contact-group">
+            <h3 class="muted">Email</h3>
+            <a href="mailto:lucajmitchell@gmail.com" class="contact-link"
+              >lucajmitchell@gmail.com</a
+            >
+          </div>
+          <div class="contact-group">
+            <h3 class="muted">GitHub</h3>
+            <a href="https://github.com/lucajmitchell" class="contact-link"
+              >lucajmitchell</a
+            >
+          </div>
+          <div class="contact-group">
+            <h3 class="muted">LinkedIn</h3>
+            <a
+              href="https://www.linkedin.com/in/luca-mitchell-1a8a16278"
+              class="contact-link"
+              >Luca Mitchell</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="scripts/parallax.js"></script>
   </body>
 </html>

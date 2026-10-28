@@ -1,0 +1,73 @@
+.about {
+  --gap: var(--space-md);
+}
+
+.about .content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.about-responsive-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--gap);
+}
+
+.about-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+}
+
+.about-rows {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: var(--gap);
+}
+
+.about-panel {
+  background-color: var(--bg-subtle);
+  padding: var(--space-md);
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow);
+}
+
+.about-panel.stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  justify-content: flex-end;
+}
+
+.about-info {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-md);
+}
+
+.about-info li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.about-info li i {
+  font-size: var(--text-lg);
+}
+
+.about-skills {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.about-skills li {
+  background-color: var(--bg);
+  padding: 0.5em 1em;
+  border-radius: 10000px;
+}
